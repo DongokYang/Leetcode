@@ -5,12 +5,7 @@ class Solution(object):
         :rtype: str
         """
         address = list(address)
-        nad = []
-        for i in address:
-            if i =='.':
-                i = '[.]'
-            nad.append(i)
-        
-        nadlist = "".join(nad)
-        return nadlist 
+        address = list(map(lambda x: x.replace('.','[.]'),address))
+        address = "".join(address)
+        return address 
                 
