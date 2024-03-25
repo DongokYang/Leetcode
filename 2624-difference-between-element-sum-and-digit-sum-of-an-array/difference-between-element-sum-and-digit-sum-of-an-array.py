@@ -5,4 +5,4 @@ class Solution:
         for i in range(len(nums)):
             digit_sum += sum(int(d) for d in str(nums[i]))
 
-        return abs(summ - digit_sum)
+        return summ - digit_sum
