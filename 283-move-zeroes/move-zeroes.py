@@ -11,8 +11,6 @@ class Solution:
         
         for i in range(cnt):
             nums.remove(0)
-        
-        for i in range(cnt):
             nums.append(0)
 
         return nums
