@@ -6,12 +6,10 @@ class Solution:
 
         for i in nums1:
             if i not in nums2:
-                if i not in ans[0]:
-                    ans[0].append(i)
+                ans[0].append(i)
 
         for ii in nums2:
             if ii not in nums1:
-                if ii not in ans[1]:
-                    ans[1].append(ii)              
+                ans[1].append(ii)              
 
         return ans
