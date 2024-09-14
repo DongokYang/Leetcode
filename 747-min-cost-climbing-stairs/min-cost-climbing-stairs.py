@@ -1,5 +1,6 @@
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
+        
         n = 2
         sm = 0
         cost.insert(0,0)
@@ -10,4 +11,3 @@ class Solution:
             n +=1
 
         return lst[-1]
-
