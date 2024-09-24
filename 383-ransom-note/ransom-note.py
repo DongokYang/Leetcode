@@ -1,13 +1,9 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         
-        nl = list(ransomNote)
-        nlcp =  list(magazine)
 
-        for i in nl:
-            if i in nlcp:
-                nlcp.remove(i)
-            else:
+        for i in list(set(ransomNote)):
+            if ransomNote.count(i) > magazine.count(i):
                 return False
-        
-        return True
+
+        return True 
