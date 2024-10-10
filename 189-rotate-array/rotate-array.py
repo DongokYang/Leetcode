@@ -3,7 +3,12 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        k = k%len(nums)
-        for i in range(k):
-            nums.insert(0,nums.pop())
-                
+        n = len(nums)
+        k = k % n
+        rotated = [0] * n
+
+        for i in range(n):
+            rotated[(i + k) % n] = nums[i]
+        
+        for i in range(n):
+            nums[i] = rotated[i]
