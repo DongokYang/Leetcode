@@ -1,24 +1,23 @@
 class Solution:
-    def isSubsequence(self, s: str, t: str) -> bool: 
+    def isSubsequence(self, s: str, t: str) -> bool:
         s = list(s)
         t = list(t)
+
         a = 0
-        crnt = 0
+        b = 0
 
-        if len(s) ==0 :
+        if len(s)==0:
             return True
-
-        while True:
-            if crnt == len(s):
-                return True
-
-            if a ==len(t):
-                return False
-
-            if s[crnt] == t[a]:
-                crnt +=1
+        
+        while b < len(t) and a<len(s):
+            if s[a] ==t[b]:
                 a +=1
+                b +=1
             else:
-                a +=1
-            
-    
+                b +=1
+
+        if a ==len(s):
+            return True
+        else:
+            return False
+                    
